@@ -138,6 +138,13 @@ body {
     width: 314px;
 }
 
+.game-box__two {
+    margin-top: 11px;
+    background-color: white;
+    border-radius: 30px;
+    min-width: 378px;
+}
+
 .game-two__product {
     background-image: url(img/game-two.png);
     background-repeat: no-repeat;
@@ -166,4 +173,54 @@ body {
     gap: 16px;
     margin: 10px 0px;
     padding: 32px 32px 36px 32px;
+}
+
+.game-four__product {    
+    background-image: url(img/game-four.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 32px 32px 36px 32px;
+    height: 490px;
+    border-radius: 30px;
+    max-width: 314px;
+    width: 100%;
+}
+
+.game-five__product {
+    background-image: url(img/game-five.png);
+    max-width: 314px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 30px;
+    min-height: 455px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 16px;
+    margin: 10px 0px;
+    padding: 32px 32px 36px 32px;
+    margin-top: 33px;
+}
+
+.game-six__product {
+    background-image: url(img/game-six.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 32px 32px 36px 32px;
+    height: 490px;
+    border-radius: 30px;
+    max-width: 314px;
+    width: 100%;
 }
