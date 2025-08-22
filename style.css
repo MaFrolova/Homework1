@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+.center{
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -10,14 +15,19 @@ body {
   font-style: normal;
 }
 
-a {
-  text-decoration: none;
-}
-
 .top {
     width: 1440px;
-    height: 800px;
+    height: 603px;
     background: rgba(225, 255, 143, 1);
+    background-image: 
+    url(img/big_star.svg),
+    url(img/Star_right.svg),
+    url(img/Star_right-top.svg),
+    url(img/Star_left_top.svg),
+    url(img/star_left.svg);
+    background-position:
+   856px -334px, 1014px 568px, 948px 538px, 157px 69px, 62px 93px;
+    background-repeat: no-repeat;
     padding-top: 196px;
     display: flex;
     flex-direction: column;
@@ -40,6 +50,7 @@ a {
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
+    padding-top: 22px;
 }
 
 .top__btn {
