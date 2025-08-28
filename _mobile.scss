@@ -16,46 +16,53 @@
     url(img/Star-bottom_mobile.svg);
     background-repeat: no-repeat;
     background-position: 257px -90px, 28px 114px, 76px 80px, 320px 734px, 301px 712px;
+  
+    &__heading {
+        width: 296px;
+        font-size: 40px;
+        line-height: 49px;
+        text-align: center;
+    }
+
+    &__description {
+        width: 296px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    &__btn {
+        width: 285px;
+        height: 55px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+        margin-top: 12px;
+    }
   }
-  .top__heading {
-    width: 296px;
-    font-size: 40px;
-    line-height: 49px;
-    text-align: center;
-  }
-  .top__description {
-    width: 296px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: center;
-  }
-  .top__btn {
-    width: 285px;
-    height: 55px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 141.69%;
-    margin-top: 12px;
-  }
+
   .content {
     display: none;
   }
 
   .mini-game {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(32, 32, 39);
     width: auto;
     min-height: 3740px;
     color: white;
-    padding-top: 38px;
-
+    padding-top: 48px;
+    align-items: center;
+    
     &__heading {
         font-size: 40px;
         font-weight: 700;
         line-height: 49px;
-        margin-left: 16px;
+        margin-left: -120px;
         width: 250px;
-        
+        text-align: start;        
         padding-bottom: 48px;
     }
 
@@ -63,6 +70,7 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+        
     }
 
     &-box {
@@ -79,6 +87,10 @@
         flex-direction: column;
         gap: 16px;
         padding: 29.04px 29.04px 32.67px 29.04px;
+    }
+
+    &__img {
+        display: block;
     }
 
     &__name {
@@ -131,8 +143,6 @@
         color: rgb(255, 255, 255);
 
     }
-
   }
-
   
 } 
