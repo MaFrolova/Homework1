@@ -218,41 +218,4 @@ body {
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  .center {
-    padding-left: calc(50% - 131px);
-    padding-right: calc(50% - 131px);
-  }
-  .top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 23px;
-    background-image: url(img/big-star_mobile.svg), url(img/small-star.svg), url(img/small_star_mobile.svg), url(img/Star-top_mobile.svg), url(img/Star-bottom_mobile.svg);
-    background-repeat: no-repeat;
-    background-position: 227px -90px, 28px 114px, 76px 80px, 320px 734px, 301px 712px;
-  }
-  .top__heading {
-    width: 296px;
-    font-size: 40px;
-    line-height: 49px;
-    text-align: center;
-  }
-  .top__description {
-    width: 296px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: center;
-  }
-  .top__btn {
-    width: 285px;
-    height: 55px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 141.69%;
-  }
-  .heading {
-    display: none;
-  }
-}/*# sourceMappingURL=style.css.map */
+@import 'mobile';
