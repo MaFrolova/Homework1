@@ -22,7 +22,7 @@
         
         <div class="game-container">
 
-            <a class="content__link" href="#">
+            <a class="content__link" href="#game1">
                 <article class="game-box">
                 <div class="game-one__product">
                     <p class="game__text">Игра № 1</p>
@@ -30,7 +30,7 @@
                 </div>                               
                 </article>
             </a>
-            <a class="content__link" href="#">
+            <a class="content__link" href="#game2">
                 <article class="game-box game-box__two">
                 <div class="game-two__product">
                     <p class="game__text">Игра № 2</p>
@@ -38,7 +38,7 @@
                 </div>                               
                 </article>
             </a>
-            <a class="content__link" href="#">
+            <a class="content__link" href="#game3">
                 <article class="game-box">
                 <div class="game-three__product">
                     <p class="game__text">Игра № 3</p>
@@ -46,7 +46,7 @@
                 </div>                               
                 </article>
             </a>
-            <a class="content__link" href="#">
+            <a class="content__link" href="#game4">
                 <article class="game-box">
                 <div class="game-four__product">
                     <p class="game__text">Игра № 4</p>
@@ -54,7 +54,7 @@
                 </div>                               
                 </article>
             </a>
-            <a class="content__link" href="#">
+            <a class="content__link" href="#game5">
                 <article class="game-box">
                 <div class="game-five__product">
                     <p class="game__text">Игра № 5</p>
@@ -62,7 +62,7 @@
                 </div>                               
                 </article>
             </a>
-            <a class="content__link" href="#">
+            <a class="content__link" href="#game6">
                 <article class="game-box">
                 <div class="game-six__product">
                     <p class="game__text">Игра № 6</p>
@@ -78,59 +78,65 @@
 
         <div class="mini-game__box">
             
-            <article class="mini-game-box">
-                <img class="mini-game__img" src="img/mobile-game-one.png" alt="Угадай число">
+            <article class="mini-game-box">                
                 <div class="mini-game__product">
                     <p class="mini-game__name mini-game__name_one">Угадай число</p>
                     <p class="mini-game__text mini-game__text_one">Попробуй угадать случайное число от 1 до 100.</p>
-                    <button class="mini-game__btn">Играть!</button>
-                </div>                               
+                    <button class="mini-game__btn" onclick="guessNumber()">Играть!</button>
+                </div> 
+                <img class="mini-game__img" id="game1" src="img/minigame-one.png" alt="Угадай число">
+                <img class="mini-game__img-mobile" src="img/mobile-game-one.png" alt="Угадай число">                              
             </article>
             <article class="mini-game-box">
-                <img class="mini-game__img" src="img/mobile-game-two.png" alt="Простая арифметика">
+                <img class="mini-game__img" id="game2" src="img/minigame-two.png" alt="Простая арифметика">
+                <img class="mini-game__img-mobile" src="img/mobile-game-two.png" alt="Простая арифметика">
                 <div class="mini-game__product">
                     <p class="mini-game__name mini-game__name_two">Простая арифметика</p>
                     <p class="mini-game__text mini-game__text_one">Попробуй решить простые арифметические задачи.</p>
-                    <button class="mini-game__btn">Играть!</button>
+                    <button class="mini-game__btn" onclick="arithmetic()">Играть!</button>
                 </div>                               
             </article>
-            <article class="mini-game-box">
-                <img class="mini-game__img" src="img/mobile-game-three.png" alt="Переверни текст">
+            <article class="mini-game-box">                
                 <div class="mini-game__product">
-                    <p class="mini-game__name mini-game__name_two">Переверни текст</p>
+                    <p class="mini-game__name mini-game__name_one">Переверни текст</p>
                     <p class="mini-game__text mini-game__text_one">Попробуй ввести текст, который будет перевернут.</p>
-                    <button class="mini-game__btn">Играть!</button>
-                </div>                               
+                    <button class="mini-game__btn" onclick="turnText()">Играть!</button>
+                </div>
+                <img class="mini-game__img" id="game3" src="img/minigame-three.png" alt="Переверни текст">
+                <img class="mini-game__img-mobile" src="img/mobile-game-three.png" alt="Переверни текст">                               
             </article>
             <article class="mini-game-box">
-                <img class="mini-game__img" src="img/mobile-game-four.png" alt="Камень">
+                <img class="mini-game__img" id="game4" src="img/minigame-five.png" alt="Камень">
+                <img class="mini-game__img-mobile" src="img/mobile-game-four.png" alt="Камень">
                 <div class="mini-game__product">
                     <p class="mini-game__name mini-game__name_three">Камень,<br>ножницы,<br>бумага</p>
                     <p class="mini-game__text mini-game__text_one">Сыграй в популярную игру против компьютера.</p>
-                    <button class="mini-game__btn">Играть!</button>
+                    <button class="mini-game__btn" onclick="stone()">Играть!</button>
                 </div>                               
             </article>
-            <article class="mini-game-box">
-                <img class="mini-game__img" src="img/mobile-game-five.png" alt="Викторина">
+            <article class="mini-game-box">                
                 <div class="mini-game__product">
                     <p class="mini-game__name mini-game__name_two">Простая викторина</p>
                     <p class="mini-game__text mini-game__text_one">Отвечай на вопросы викторины с вариантами ответов.</p>
-                    <button class="mini-game__btn">Играть!</button>
-                </div>                               
+                    <button class="mini-game__btn" onclick="quiz()">Играть!</button>
+                </div>
+                <img class="mini-game__img" id="game5" src="img/minigame-four.png" alt="Викторина">
+                <img class="mini-game__img-mobile" src="img/mobile-game-five.png" alt="Викторина">                               
             </article>
             <article class="mini-game-box">
-                <img class="mini-game__img" src="img/mobile-game-six.png" alt="Генератор">
+                <img class="mini-game__img" id="game6" src="img/minigame-six.png" alt="Генератор">
+                <img class="mini-game__img-mobile" src="img/mobile-game-six.png" alt="Генератор">
                 <div class="mini-game__product">
                     <p class="mini-game__name mini-game__name_three">Генератор <br> случайных <br> цветов</p>
                     <p class="mini-game__text mini-game__text_two">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                    <button class="mini-game__btn">Играть!</button>
+                    <button class="mini-game__btn" onclick="generator()">Играть!</button>
                 </div>                               
             </article>
         </div>
     </div>
 
     <div class="footer">
-       <p class="foote__title" >Все права защищены.</p> 
+       <p class="footer__title" >Все права защищены.</p> 
     </div>
 
    

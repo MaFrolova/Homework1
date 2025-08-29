@@ -90,7 +90,11 @@
     }
 
     &__img {
+        display: none;
+
+        &-mobile {
         display: block;
+        }
     }
 
     &__name {
@@ -141,7 +145,6 @@
         border-radius: 60px;
         background: rgb(32, 32, 39);
         color: rgb(255, 255, 255);
-
     }
   }
   
