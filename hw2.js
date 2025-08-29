@@ -35,36 +35,36 @@ num += 5;
 num -= 3;
 num *= 7;
 num /= 3;
-num += 1;
-num -= 1;
+num ++;
+num --;
 alert(num);
 
 //Задание 8
-let age = prompt (Сколько вам лет?);
+let age = prompt('Сколько вам лет?');
 alert(age);
 
 //Задание 9
-const user {
+const user = {
     name: 'Maks',
     age: 20, 
-    isAdmin: true,
+    isAdmin: true
 }
 
 // Задание 10
-let userName = prompt('Ваше имя?')
+let userName = prompt ('Ваше имя?')
 alert( `Привет, ${userName}!`)
 
 //Дополнительное задание
-let number = prompt(Загадай любое число);
+let number = prompt('Загадай любое число');
 number = Number(number);
 let doubleNumber = number * 2;
-alert ('Удвоенное число: $(doubleNumber)');
+alert(`Удвоенное число: ${doubleNumber}`);
 let plusten = doubleNumber + 10;
-alert ('Удвоенное число + 10: $(plusten)');
+alert(`Удвоенное число + 10: ${plusten}`);
 let division = plusten / 2;
-alert ('Результат деления: $(division)');
+alert(`Результат деления: ${division}`);
 let finalResult = division - number;
-alert ('Результат вычитания:$(finalResult)');
+alert(`Результат вычитания: ${finalResult}`); 
 alert ('ответ равен 5')
 
 
