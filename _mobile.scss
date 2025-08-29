@@ -91,11 +91,11 @@
 
     &__img {
         display: none;
-
-        &-mobile {
-        display: block;
-        }
     }
+
+    &__img-mobile {
+        display: block;
+    }    
 
     &__name {
         display: block;
