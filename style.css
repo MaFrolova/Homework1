@@ -15,7 +15,7 @@ body {
   font-style: normal;
 }
 
-.top {
+.header {
   height: 603px;
   background: rgb(225, 255, 143);
   background-image: url(img/big_star.svg), url(img/Star_right.svg), url(img/Star_right-top.svg), url(img/Star_left_top.svg), url(img/star_left.svg);
@@ -26,22 +26,19 @@ body {
   flex-direction: column;
   gap: 24px;
 }
-
-.top__heading {
+.header__title {
   width: 768px;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
 }
-
-.top__description {
+.header__description {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
   margin-top: 24px;
 }
-
-.top__btn {
+.header__button {
   width: 247px;
   height: 66px;
   padding: 16px 28px 16px 28px;
@@ -57,8 +54,7 @@ body {
   text-align: center;
   text-decoration: none;
 }
-
-.top__btn:hover {
+.header__button:hover {
   background: #FFF;
   color: #000;
 }
@@ -77,6 +73,18 @@ body {
   color: white;
   padding-top: 94px;
 }
+_ .content__title {
+  width: 768px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+}
+.content__description {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 24px;
+}
 
 .content__link {
   text-decoration: none;
@@ -88,13 +96,7 @@ body {
   transform: scale(1.1);
 }
 
-.game-one {
-  background-color: white;
-  border-radius: 30px;
-  min-width: 378px;
-}
-
-.game-one__product {
+.game-card__content1 {
   background-image: url(img/game-one.png);
   background-repeat: no-repeat;
   background-color: white;
@@ -109,7 +111,7 @@ body {
   padding: 32px 32px 36px 32px;
 }
 
-.game__text {
+.game-card__number {
   border-radius: 52.58px;
   background-color: rgb(247, 247, 247);
   width: 108px;
@@ -121,7 +123,7 @@ body {
   color: black;
 }
 
-.game__name {
+.game-card__title {
   color: rgb(32, 32, 39);
   font-size: 32px;
   font-weight: 700;
@@ -131,14 +133,14 @@ body {
   width: 314px;
 }
 
-.game-box__two {
+.game-card--type2 {
   margin-top: 11px;
   background-color: white;
   border-radius: 30px;
   min-width: 378px;
 }
 
-.game-two__product {
+.game-card__content2 {
   background-image: url(img/game-two.png);
   background-repeat: no-repeat;
   border-radius: 30px;
@@ -153,7 +155,7 @@ body {
   padding: 32px 32px 36px 32px;
 }
 
-.game-three__product {
+.game-card__content3 {
   background-image: url(img/game-three.png);
   background-repeat: no-repeat;
   background-color: white;
@@ -168,7 +170,7 @@ body {
   padding: 32px 32px 36px 32px;
 }
 
-.game-four__product {
+.game-card__content4 {
   background-image: url(img/game-four.png);
   background-repeat: no-repeat;
   background-color: white;
@@ -184,7 +186,7 @@ body {
   width: 100%;
 }
 
-.game-five__product {
+.game-card__content5 {
   background-image: url(img/game-five.png);
   max-width: 314px;
   width: 100%;
@@ -202,7 +204,7 @@ body {
   margin-top: 33px;
 }
 
-.game-six__product {
+.game-card__content6 {
   background-image: url(img/game-six.png);
   background-repeat: no-repeat;
   background-color: white;
