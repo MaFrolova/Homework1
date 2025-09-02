@@ -15,7 +15,7 @@ body {
   font-style: normal;
 }
 
-.top {
+.header {
   height: 603px;
   background: rgb(225, 255, 143);
   background-image: url(img/big_star.svg), url(img/Star_right.svg), url(img/Star_right-top.svg), url(img/Star_left_top.svg), url(img/star_left.svg);
@@ -27,20 +27,20 @@ body {
   gap: 24px;
 }
 
-.top__heading {
+.header__title {
   width: 768px;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
 }
 
-.top__description {
+.header__description {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
+  margin-top: 24px;
 }
-
-.top__btn {
+.header__button {
   width: 247px;
   height: 66px;
   padding: 16px 28px 16px 28px;
@@ -57,7 +57,7 @@ body {
   text-decoration: none;
 }
 
-.top__btn:hover {
+.header__button:hover {
   background: #FFF;
   color: #000;
 }
@@ -73,9 +73,20 @@ body {
 .content {
   background-color: rgb(32, 32, 39);
   width: auto;
-  height: 1470px;
   color: white;
   padding-top: 94px;
+}
+_ .content__title {
+  width: 768px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+}
+.content__description {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 24px;
 }
 
 .content__link {
@@ -88,13 +99,7 @@ body {
   transform: scale(1.1);
 }
 
-.game-one {
-  background-color: white;
-  border-radius: 30px;
-  min-width: 378px;
-}
-
-.game-one__product {
+.game-card__content1 {
   background-image: url(img/game-one.png);
   background-repeat: no-repeat;
   background-color: white;
@@ -109,7 +114,7 @@ body {
   padding: 32px 32px 36px 32px;
 }
 
-.game__text {
+.game-card__number {
   border-radius: 52.58px;
   background-color: rgb(247, 247, 247);
   width: 108px;
@@ -121,7 +126,7 @@ body {
   color: black;
 }
 
-.game__name {
+.game-card__title {
   color: rgb(32, 32, 39);
   font-size: 32px;
   font-weight: 700;
@@ -131,14 +136,14 @@ body {
   width: 314px;
 }
 
-.game-box__two {
+.game-card--type2 {
   margin-top: 11px;
   background-color: white;
   border-radius: 30px;
   min-width: 378px;
 }
 
-.game-two__product {
+.game-card__content2 {
   background-image: url(img/game-two.png);
   background-repeat: no-repeat;
   border-radius: 30px;
@@ -153,7 +158,7 @@ body {
   padding: 32px 32px 36px 32px;
 }
 
-.game-three__product {
+.game-card__content3 {
   background-image: url(img/game-three.png);
   background-repeat: no-repeat;
   background-color: white;
@@ -168,7 +173,7 @@ body {
   padding: 32px 32px 36px 32px;
 }
 
-.game-four__product {
+.game-card__content4 {
   background-image: url(img/game-four.png);
   background-repeat: no-repeat;
   background-color: white;
@@ -184,7 +189,7 @@ body {
   width: 100%;
 }
 
-.game-five__product {
+.game-card__content5 {
   background-image: url(img/game-five.png);
   max-width: 314px;
   width: 100%;
@@ -202,7 +207,7 @@ body {
   margin-top: 33px;
 }
 
-.game-six__product {
+.game-card__content6 {
   background-image: url(img/game-six.png);
   background-repeat: no-repeat;
   background-color: white;
@@ -219,7 +224,95 @@ body {
 }
 
 .mini-game {
+  background-color: #202027;
+  width: auto;
+  height: 3550px;
+}
+.mini-game__heading {
+  width: 400px;
+  height: 78px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  color: #FFFFFF;
+  padding-top: 96px;
+  padding-bottom: 72px;
+}
+.mini-game__box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.mini-game-box {
+  width: 100%;
+  min-height: 500px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 20px 67px -12px;
+  display: flex;
+  flex-direction: row;
+}
+.mini-game__product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 48px;
+  gap: 24px;
+}
+.mini-game__img {
+  display: block;
+}
+.mini-game__img-mobile {
   display: none;
+}
+.mini-game__name {
+  display: block;
+  color: rgb(32, 32, 39);
+  width: 504px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%;
+  align-items: center;
+  text-align: left;
+}
+.mini-game__text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  width: 440px;
+}
+.mini-game__btn {
+  width: 247px;
+  height: 66px;
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  font-family: inherit;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  margin-top: 12px;
+}
+.mini-game__btn:hover {
+  background: #FFF;
+  color: #000;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  background: rgb(189, 237, 53);
+}
+.footer__title {
+  width: 285px;
+  height: 29px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -299,6 +392,9 @@ body {
     padding: 29.04px 29.04px 32.67px 29.04px;
   }
   .mini-game__img {
+    display: none;
+  }
+  .mini-game__img-mobile {
     display: block;
   }
   .mini-game__name {
