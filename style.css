@@ -26,14 +26,12 @@ body {
   flex-direction: column;
   gap: 24px;
 }
-
 .header__title {
   width: 768px;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
 }
-
 .header__description {
   font-size: 24px;
   font-weight: 400;
@@ -56,7 +54,6 @@ body {
   text-align: center;
   text-decoration: none;
 }
-
 .header__button:hover {
   background: #FFF;
   color: #000;
@@ -226,7 +223,7 @@ _ .content__title {
 .mini-game {
   background-color: #202027;
   width: auto;
-  height: 3550px;
+  padding-bottom: 144px;
 }
 .mini-game__heading {
   width: 400px;
@@ -320,7 +317,7 @@ _ .content__title {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .top {
+  .header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,20 +326,20 @@ _ .content__title {
     background-repeat: no-repeat;
     background-position: 257px -90px, 28px 114px, 76px 80px, 320px 734px, 301px 712px;
   }
-  .top__heading {
+  .header__title {
     width: 296px;
     font-size: 40px;
     line-height: 49px;
     text-align: center;
   }
-  .top__description {
+  .header__description {
     width: 296px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     text-align: center;
   }
-  .top__btn {
+  .header__button {
     width: 285px;
     height: 55px;
     font-size: 16px;
@@ -360,16 +357,14 @@ _ .content__title {
     width: auto;
     min-height: 3740px;
     color: white;
-    padding-top: 48px;
     align-items: center;
+    padding-bottom: 10px;
   }
   .mini-game__heading {
     font-size: 40px;
     font-weight: 700;
-    line-height: 49px;
-    margin-left: -120px;
-    width: 250px;
-    text-align: start;
+    padding-left: 16px;
+    padding-top: 48px;
     padding-bottom: 48px;
   }
   .mini-game__box {
@@ -384,6 +379,10 @@ _ .content__title {
     background-color: white;
     border-radius: 30px;
     min-width: 378px;
+  }
+  .mini-game-box_start {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .mini-game__product {
     display: flex;
@@ -440,5 +439,15 @@ _ .content__title {
     border-radius: 60px;
     background: rgb(32, 32, 39);
     color: rgb(255, 255, 255);
+  }
+  .footer {
+    height: 100px;
+  }
+  .footer__title {
+    width: 190px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
