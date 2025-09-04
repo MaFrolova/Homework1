@@ -1,4 +1,5 @@
-@media (max-width: 767px) {
+@media (min-width:375px) and (max-width:767px){
+
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -60,7 +61,7 @@
     &__heading {
         font-size: 40px;
         font-weight: 700;          
-        padding-left: 16px;     
+        padding-left: 50px;     
         padding-top: 48px;       
         padding-bottom: 48px;
     }
@@ -72,12 +73,10 @@
     }
 
     &-box {
-        max-width: 343px;
+        width: 343px;
         display: flex;
         flex-direction: column;
-        background-color: white;
         border-radius: 30px;
-        min-width: 378px;
 
         &_start {
             display: flex;
@@ -89,21 +88,20 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        padding: 29.04px 29.04px 32.67px 29.04px;
+        width: 343px;
+        padding: 29px 29px 32px 29px;
+
     }
 
     &__img {
-        display: none;
-    }
-
-    &__img-mobile {
-        display: block;
-    }    
+        width: 343px;
+        border-radius: 30px;
+    } 
 
     &__name {
         display: block;
         color: rgb(32, 32, 39);
-        width: 284.93px;        
+        width: 285px;        
         font-size: 32px;
         font-weight: 700;
         line-height: 39px;

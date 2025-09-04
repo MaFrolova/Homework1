@@ -8,6 +8,10 @@
   padding-right: calc(50% - 600px);
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -19,7 +23,7 @@ body {
   height: 603px;
   background: rgb(225, 255, 143);
   background-image: url(img/big_star.svg), url(img/Star_right.svg), url(img/Star_right-top.svg), url(img/Star_left_top.svg), url(img/star_left.svg);
-  background-position: 856px -334px, 1014px 568px, 948px 538px, 157px 69px, 62px 93px;
+  background-position: 840px -420px, 1015px 570px, 950px 540px, 160px 70px, 63px 95px;
   background-repeat: no-repeat;
   padding-top: 196px;
   display: flex;
@@ -46,7 +50,7 @@ body {
     padding: 16px 28px 16px 28px;
     margin-top: 48px;
     box-sizing: border-box;
-    border: 1px solid rgb(32, 32, 39);
+    border: none;    
     border-radius: 60px;
     background: rgb(32, 32, 39);
     color: rgb(255, 255, 255);
@@ -55,11 +59,13 @@ body {
     line-height: 29px;
     text-align: center;
     text-decoration: none;
+    transition: 1.5s;
   }
 
   &__button:hover {
     background: #FFF;
     color: #000;
+    cursor: pointer;
   }
 }
 
@@ -75,14 +81,16 @@ body {
   background-color: rgb(32, 32, 39);
   width: auto;
   color: white;
-  padding-top: 94px;_
+  padding-top: 94px;
 
   &__title {
-      width: 768px;
-      font-size: 64px;
-      font-weight: 700;
-      line-height: 78px;
-    }
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: left;
+  }
 
   &__description {
     font-size: 24px;
@@ -100,6 +108,7 @@ body {
 
 .content__link:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .game-card__content1 {
@@ -252,8 +261,7 @@ padding-bottom: 144px;
     width: 100%;
     min-height: 500px;
     background-color: white;
-    border-radius: 30px;
-    box-shadow: 0px 20px 67px -12px;
+    border-radius: 30px;    
     display: flex;
     flex-direction: row;  
   }
@@ -267,7 +275,9 @@ padding-bottom: 144px;
   }
 
   &__img {
-    display: block;
+    width: 600px;
+    border-radius: 30px;
+
 
     &-mobile {
       display: none;
@@ -289,14 +299,13 @@ padding-bottom: 144px;
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
-    width: 440px;
-   
-
+    width: 440px;  
   }
 
   &__btn {
     width: 247px;
     height: 66px;
+    border: none;
     border-radius: 60px;
     background: rgb(32, 32, 39);
     font-family: inherit;
@@ -305,12 +314,14 @@ padding-bottom: 144px;
     font-weight: 600;
     line-height: 141.69%;
     margin-top: 12px;
+    transition: 1.5s;
+    cursor: pointer;   
   }
   &__btn:hover {
     background: #FFF;
     color: #000;
-  }
-    
+    border: 0.5px solid #000;
+  }    
 }
 
 .footer {
