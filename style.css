@@ -325,7 +325,7 @@ body {
   line-height: 100%;
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 1200px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -398,6 +398,8 @@ body {
   .mini-game__product {
     display: flex;
     flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
     gap: 16px;
     width: 343px;
     padding: 29px 29px 32px 29px;
