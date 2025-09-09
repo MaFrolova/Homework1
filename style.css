@@ -23,7 +23,7 @@ body {
   height: 603px;
   background: rgb(225, 255, 143);
   background-image: url(img/big_star.svg), url(img/Star_right.svg), url(img/Star_right-top.svg), url(img/Star_left_top.svg), url(img/star_left.svg);
-  background-position: 840px -420px, 1015px 570px, 950px 540px, 160px 70px, 63px 95px;
+  background-position: calc(100% - 0px), calc(0% + 63px) 94px, calc(0% + 156px) 69px, calc(100% - 344px) 568px, calc(100% - 455px) 538px;
   background-repeat: no-repeat;
   padding-top: 196px;
   display: flex;
@@ -31,7 +31,6 @@ body {
   gap: 24px;
 }
 .header__title {
-  width: 768px;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -76,11 +75,13 @@ body {
 .content {
   background-color: rgb(32, 32, 39);
   width: auto;
+  background-image: url(img/Star\ 12.svg), url(img/Star\ 11.svg), url(img/Star\ 12mini.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% + 10px) 150px, calc(0% + 25px) 770px, calc(0% + 40px) 820px;
   color: white;
   padding-top: 94px;
 }
 .content__title {
-  font-family: Montserrat;
   font-size: 64px;
   font-weight: 700;
   line-height: 100%;
@@ -230,17 +231,17 @@ body {
 }
 
 .mini-game {
+  position: relative;
   background-color: #202027;
   width: auto;
   padding-bottom: 144px;
 }
 .mini-game__heading {
-  width: 400px;
-  height: 78px;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
   color: #FFFFFF;
+  text-align: left;
   padding-top: 96px;
   padding-bottom: 72px;
 }
@@ -250,42 +251,39 @@ body {
   gap: 32px;
 }
 .mini-game-box {
-  width: 100%;
+  width: auto;
   min-height: 500px;
   background-color: white;
   border-radius: 30px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .mini-game__product {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   padding: 48px;
   gap: 24px;
 }
 .mini-game__img {
-  width: 600px;
+  width: auto;
   border-radius: 30px;
 }
-.mini-game__img-mobile {
-  display: none;
-}
 .mini-game__name {
-  display: block;
   color: rgb(32, 32, 39);
   width: 504px;
   font-size: 48px;
   font-weight: 700;
   line-height: 100%;
-  align-items: center;
   text-align: left;
 }
 .mini-game__text {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  width: 440px;
+  width: 500px;
 }
 .mini-game__btn {
   width: 247px;
@@ -325,7 +323,7 @@ body {
   line-height: 100%;
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 1024px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -335,18 +333,18 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    background-image: url(img/big-star_mobile.svg), url(img/small-star.svg), url(img/small_star_mobile.svg), url(img/Star-top_mobile.svg), url(img/Star-bottom_mobile.svg);
+    background-image: url(img/big_star_mobile.svg), url(img/small-star.svg), url(img/small_star_mobile.svg), url(img/Star-top_mobile.svg), url(img/Star-bottom_mobile.svg);
     background-repeat: no-repeat;
-    background-position: 257px -90px, 28px 114px, 76px 80px, 320px 734px, 301px 712px;
+    background-position: calc(100% - 0px) 0px, calc(0% + 37px) 97px, calc(0% + 91px) 64px, calc(100% - 34px) 580px, calc(100% - 86px) 557px;
   }
   .header__title {
-    width: 296px;
     font-size: 40px;
+    font-weight: 700;
     line-height: 49px;
     text-align: center;
   }
   .header__description {
-    width: 296px;
+    height: 60px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -381,14 +379,13 @@ body {
     padding-bottom: 48px;
   }
   .mini-game__box {
-    display: flex;
-    flex-direction: column;
     gap: 24px;
   }
   .mini-game-box {
-    width: 343px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     border-radius: 30px;
   }
   .mini-game-box_start {
@@ -398,12 +395,14 @@ body {
   .mini-game__product {
     display: flex;
     flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
     gap: 16px;
-    width: 343px;
+    width: 100%;
     padding: 29px 29px 32px 29px;
   }
   .mini-game__img {
-    width: 343px;
+    width: 100%;
     border-radius: 30px;
   }
   .mini-game__name {

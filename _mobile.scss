@@ -1,4 +1,4 @@
-@media (min-width:375px) and (max-width:767px){
+@media (min-width:375px) and (max-width:1024px){
 
   .center {
     padding-left: 16px;
@@ -11,23 +11,25 @@
     align-items: center;
     gap: 24px;
     background-image: 
-    url(img/big-star_mobile.svg), 
+    url(img/big_star_mobile.svg), 
     url(img/small-star.svg), 
     url(img/small_star_mobile.svg), 
     url(img/Star-top_mobile.svg), 
     url(img/Star-bottom_mobile.svg);
     background-repeat: no-repeat;
-    background-position: 257px -90px, 28px 114px, 76px 80px, 320px 734px, 301px 712px;
-  
-    &__title {
-        width: 296px;
+    background-position: calc(100% - 0px) 0px, calc(0% + 37px) 97px, calc(0% + 91px) 64px, calc(100% - 34px) 580px, calc(100% - 86px) 557px;
+    
+    &__title {   
+           
         font-size: 40px;
+        font-weight: 700;
         line-height: 49px;
         text-align: center;
     }
 
-    &__description {
-        width: 296px;
+    &__description { 
+        
+        height: 60px;       
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
@@ -66,16 +68,15 @@
         padding-bottom: 48px;
     }
 
-    &__box {
-        display: flex;
-        flex-direction: column;
+    &__box {        
         gap: 24px;       
     }
 
     &-box {
-        width: 343px;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
         border-radius: 30px;
 
         &_start {
@@ -87,14 +88,17 @@
     &__product {
         display: flex;
         flex-direction: column;
+        display: flex;    
+        box-sizing: border-box;  
         gap: 16px;
-        width: 343px;
+        width: 100%;
+        
         padding: 29px 29px 32px 29px;
 
     }
 
     &__img {
-        width: 343px;
+        width: 100%;
         border-radius: 30px;
     } 
 
