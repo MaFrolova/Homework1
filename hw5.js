@@ -36,8 +36,8 @@ function getSquare(number) {
 
 //Задание 4
 
-function helloUserAge(age) {
-    let age = prompt('Сколько тебе лет?');
+function age() {
+    let age = +prompt('Сколько тебе лет?');
 
    if (age < 0) {
     alert("Вы ввели неправильное значение");
@@ -57,13 +57,13 @@ function calc(a, b) {
         return a * b;
     }
 }
+console.log(calc(5, 10));
 
 //Задание 6
 
-function cubeNumber() {
-  const input = prompt("Введите число:");
-  const number = parseFloat(input);
-
+function num () {
+  let number = prompt('Введите число')
+  
   if (isNaN(number)) {
     return "Переданный параметр не является числом";
 
@@ -71,10 +71,7 @@ function cubeNumber() {
     return `${number} в кубе равняется ${number ** 3}`;
   }
 }
-
-for (let i = 0; i <= 10; i++) {
-    console.log(cubeNumber(i));
-}
+console.log(num());
 
 //Задание 7
 

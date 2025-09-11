@@ -1,0 +1,67 @@
+@media (min-width:768px) and (max-width:1200px){
+
+    .center {
+        padding-left: calc(50% - 393px);
+        padding-right: calc(50% - 393px);
+    }
+
+    
+
+    .content {
+        align-items: center;
+
+        &__title {
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        &__description {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+    .game-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .game-card__content1 {
+       height: 445px;
+    }
+    
+    .game-card__content2 {
+       height: 445px;
+    }
+
+    .game-card__content3 {
+        height: 445px;
+    }
+
+    .game-card__content4 {
+        height: 445px;
+        margin-top: 0px;
+    }
+
+    .game-card__content5 {
+        height: 445px;        
+        margin: 0px;
+    }
+
+    .game-card__content6 {
+        height: 445px;
+        margin-top: 0px;
+    }
+
+    
+    .game-card__title {
+        font-size: 24px;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 24px;
+    }
+
+    
+}
