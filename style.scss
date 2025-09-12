@@ -19,10 +19,8 @@ body {
   font-style: normal;
 }
 
-.header {
-  align-items: center; 
-  height: 603px;
-  width: 100%;
+.header {  
+  height: 603px;  
   background: rgb(225, 255, 143);
   background-image: url(img/big_star.svg), url(img/Star_right.svg), url(img/Star_right-top.svg), url(img/Star_left_top.svg), url(img/star_left.svg);
   background-position: calc(100% - 0px), calc(0% + 63px) 94px, calc(0% + 156px) 69px, calc(100% - 344px) 568px, calc(100% - 455px) 538px;
@@ -80,8 +78,7 @@ body {
 }
 
 .content {
-  background-color: rgb(32, 32, 39);
-  width: 100%;
+  background-color: rgb(32, 32, 39);  
   background-image: url(img/Star\ 12.svg), url(img/Star\ 11.svg), url(img/Star\ 12mini.svg);
   background-repeat: no-repeat;
   background-position: calc(100% + 10px) 150px, calc(0% + 25px) 770px, calc(0% + 40px) 820px;
@@ -207,8 +204,7 @@ body {
 
 .game-card__content5 {
   background-image: url(img/game-five.png);
-  max-width: 314px;
-  
+  max-width: 314px;  
   background-repeat: no-repeat;
   background-color: white;
   border-radius: 30px;
@@ -242,7 +238,6 @@ body {
 .mini-game { 
   position: relative; 
   background-color:#202027;
-  width: 100%;
   padding-bottom: 144px;    
 
   &__heading {
@@ -326,13 +321,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;  
-  width: 100%;
+  justify-content: center;
   height: 150px;
   background: rgba(189, 237, 53, 1);  
 
   &__title {   
-    width: 285px; 
     height: 29px;
     font-size: 24px;
     font-weight: 600;
@@ -341,4 +334,3 @@ body {
 }
 
 @import 'mobile';
-@import 'tablet';
