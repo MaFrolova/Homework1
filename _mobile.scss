@@ -1,33 +1,29 @@
-@media (min-width:375px) and (max-width:767px){
+@media (min-width:375px) and (max-width:1024px){
 
   .center {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+  .header {    
+    align-items: center;    
     background-image: 
-    url(img/big-star_mobile.svg), 
+    url(img/big_star_mobile.svg), 
     url(img/small-star.svg), 
     url(img/small_star_mobile.svg), 
     url(img/Star-top_mobile.svg), 
     url(img/Star-bottom_mobile.svg);
     background-repeat: no-repeat;
-    background-position: 257px -90px, 28px 114px, 76px 80px, 320px 734px, 301px 712px;
-  
-    &__title {
-        width: 296px;
+    background-position: calc(100% - 0px) 0px, calc(0% + 37px) 97px, calc(0% + 91px) 64px, calc(100% - 34px) 580px, calc(100% - 86px) 557px;
+    
+    &__title {              
         font-size: 40px;
+        font-weight: 700;
         line-height: 49px;
         text-align: center;
     }
 
-    &__description {
-        width: 296px;
+    &__description {      
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
@@ -52,7 +48,6 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(32, 32, 39);
-    width: auto;
     min-height: 3740px;
     color: white;    
     align-items: center;
@@ -60,22 +55,19 @@
     
     &__heading {
         font-size: 40px;
-        font-weight: 700;          
-        padding-left: 50px;     
+        font-weight: 700;        
         padding-top: 48px;       
         padding-bottom: 48px;
     }
 
-    &__box {
-        display: flex;
-        flex-direction: column;
+    &__box {        
         gap: 24px;       
     }
 
-    &-box {
-        width: 343px;
+    &-box {       
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
         border-radius: 30px;
 
         &_start {
@@ -87,52 +79,36 @@
     &__product {
         display: flex;
         flex-direction: column;
+        display: flex;    
+        box-sizing: border-box;  
         gap: 16px;
-        width: 343px;
+        width: 100%;        
         padding: 29px 29px 32px 29px;
-
+        align-items: center;
     }
 
     &__img {
-        width: 343px;
+        width: 100%;
         border-radius: 30px;
     } 
 
     &__name {
-        display: block;
+        text-align: center;
         color: rgb(32, 32, 39);
-        width: 285px;        
+        width: 100%;        
         font-size: 32px;
         font-weight: 700;
-        line-height: 39px;
-
-        &_one {
-            height: 39px;
-        }
-        &_two {
-            height: 78px;
-        }
-        &_three {
-            height: 117px;
-        }
+        line-height: 39px;   
+        white-space: pre-line;     
     }
 
     &__text {
-        display: block;
+        text-align: center;
         color: rgb(32, 32, 39);
-        width: 285px;
-        height: 40px;
+        width: 100%;        
         font-size: 16px;
         font-weight: 400;
-        line-height: 20px;
-
-        &_one {
-          height: 40px;  
-        }
-
-        &_two {
-            height: 60px;
-        }
+        line-height: 20px;       
     }
 
     &__btn {
@@ -150,10 +126,9 @@
   }
 
   .footer {    
-    height: 100px;
-
-    &__title {
-        width: 190px;
+    height: 100px;    
+    
+    &__title {        
         height: 20px;
         font-size: 16px;
         font-weight: 600;
