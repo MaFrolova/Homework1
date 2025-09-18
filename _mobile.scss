@@ -1,5 +1,4 @@
-@media (min-width:375px) and (max-width:1200px){
-
+@media (min-width:375px) and (max-width:1024px){
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -23,8 +22,7 @@
         text-align: center;
     }
 
-    &__description {         
-        height: 60px;       
+    &__description {      
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
@@ -94,40 +92,22 @@
     } 
 
     &__name {
-        display: block;
+        text-align: center;
         color: rgb(32, 32, 39);
-        width: 285px;        
+        width: 100%;        
         font-size: 32px;
         font-weight: 700;
-        line-height: 39px;
-
-        &_one {
-            height: 39px;
-        }
-        &_two {
-            height: 78px;
-        }
-        &_three {
-            height: 117px;
-        }
+        line-height: 39px;   
+        white-space: pre-line;     
     }
 
     &__text {
-        display: block;
+        text-align: center;
         color: rgb(32, 32, 39);
-        width: 285px;
-        height: 40px;
+        width: 100%;        
         font-size: 16px;
         font-weight: 400;
-        line-height: 20px;
-
-        &_one {
-          height: 40px;  
-        }
-
-        &_two {
-            height: 60px;
-        }
+        line-height: 20px;       
     }
 
     &__btn {

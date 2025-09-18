@@ -31,6 +31,7 @@ body {
   gap: 24px;
 }
 .header__title {
+  white-space: pre-line;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -40,6 +41,7 @@ body {
   font-weight: 400;
   line-height: 32px;
   margin-top: 24px;
+  white-space: pre-line;
 }
 .header__button {
   width: 247px;
@@ -92,6 +94,7 @@ body {
   font-weight: 400;
   line-height: 32px;
   margin-top: 24px;
+  white-space: pre-line;
 }
 
 .content__link {
@@ -317,7 +320,7 @@ body {
   line-height: 100%;
 }
 
-@media (min-width: 375px) and (max-width: 1200px) {
+@media (min-width: 375px) and (max-width: 1024px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -335,7 +338,6 @@ body {
     text-align: center;
   }
   .header__description {
-    height: 60px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -395,36 +397,21 @@ body {
     border-radius: 30px;
   }
   .mini-game__name {
-    display: block;
+    text-align: center;
     color: rgb(32, 32, 39);
-    width: 285px;
+    width: 100%;
     font-size: 32px;
     font-weight: 700;
     line-height: 39px;
-  }
-  .mini-game__name_one {
-    height: 39px;
-  }
-  .mini-game__name_two {
-    height: 78px;
-  }
-  .mini-game__name_three {
-    height: 117px;
+    white-space: pre-line;
   }
   .mini-game__text {
-    display: block;
+    text-align: center;
     color: rgb(32, 32, 39);
-    width: 285px;
-    height: 40px;
+    width: 100%;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-  }
-  .mini-game__text_one {
-    height: 40px;
-  }
-  .mini-game__text_two {
-    height: 60px;
   }
   .mini-game__btn {
     width: 285px;
