@@ -27,20 +27,12 @@ const num = 32.58884;
 
 //Задание 4
 const numbers = [52, 53, 49, 77, 21, 32];
-let number = 0;
 
-for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] > number) {
-        number = numbers[i];
-    }
-    
-}
-console.log(`Максимальное значение равно: ${number}`);
+const min = Math.min(...numbers);
+const max = Math.max(...numbers);
 
-const toFindMin = () => {
-    return Math.min(52, 53, 49, 77, 21, 32);
-}
-console.log(`Минимальное значение равно: ${toFindMin()}`);
+console.log(`Минимальное значение: ${min}`);
+console.log(`Максимальное значение: ${max}`);
 
 
 //Задание 5
