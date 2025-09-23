@@ -1,43 +1,37 @@
 function stone() {
-
-    const userAnswer = prompt('Введите вариант: Камень, ножницы, бумага!')
-    const options = ['камень', 'ножницы', 'бумага']
-    const compAnswer = options[Math.floor(Math.random() * options.length)];
-        if (!userAnswer) {
-        alert('Игра отменена!')
+    const options = ['камень', 'ножницы', 'бумага'];       
+    const compIndex = Math.floor(Math.random() * options.length);
+    const compAnswer = options[compIndex];
     
-        return
+    let userChoice = prompt('Введите вариант: Камень, ножницы, бумага!').toLowerCase();
+    
+    const results = (user, computer) => {
+        if (!options.includes(user)) {
+            return 'Вы ввели что-то не то!';
         }
-
         
-    if (userAnswer.toLowerCase() === compAnswer.toLowerCase()) {
-        alert('Ничья');
-    }
-    else {
-    if (userAnswer.toLowerCase() === options[0] && compAnswer.toLowerCase() === options[1]) {
-        alert('Вы выиграли!');
-    }
-
-    else if (userAnswer.toLowerCase() === options[0] && compAnswer.toLowerCase() === options[2]) {
-        alert('Вы проиграли!');
-    }
-
-    else if (userAnswer.toLowerCase() === options[1] && compAnswer.toLowerCase() === options[0]) {
-        alert('Вы проиграли!');
-    } 
-    else if (userAnswer.toLowerCase() === options[1] && compAnswer.toLowerCase() === options[2]) {
-        alert('Вы выиграли!');
-    } 
-    else if (userAnswer.toLowerCase() === options[2] && compAnswer.toLowerCase() === options[0]) {
-        alert('Вы выиграли!');
-    } 
-    else if (userAnswer.toLowerCase() === options[2] && compAnswer.toLowerCase() === options[1]) {
-        alert('Вы проиграли!');
-    } 
-    else {
-        alert('Вы ввели что-то не то!')
+        if (user === computer) {
+            return `Компьютер выбрал "${compAnswer}". Вы выбрали "${userChoice}".
+            Ничья!`;
         }
-    }
+        
+        const winAnswer = {
+            камень: 'ножницы',
+            ножницы: 'бумага',
+            бумага: 'камень'
+        };
+        
+        if (winAnswer[user] === computer) {
+            return `Компьютер выбрал "${compAnswer}". Вы выбрали "${userChoice}".
+        Вы выиграли!`;
+        }
+        
+        return `Компьютер выбрал "${compAnswer}". Вы выбрали "${userChoice}".
+        Вы проиграли! `;
+    };
 
-  console.log(compAnswer);
+    const result = results(userChoice, compAnswer);
+    console.log(result);
+    alert(result);
 }
+   
