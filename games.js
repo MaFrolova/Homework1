@@ -191,7 +191,6 @@ function quizGame() {
 }
    
 //Game6
-let clicksCounter = 0;
 function getRandomRgb() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -201,15 +200,6 @@ function getRandomRgb() {
 function changeBlockColor() {
     const block = document.querySelector(".mini-game");
     block.style.backgroundColor = getRandomRgb();
-    clicksCounter ++;
-    if(clicksCounter >= 10) {
-        endGame();
-    }
-}   
-function endGame() {
-    const block = document.querySelector(".mini-game");
-    block.style.backgroundColor = "";
-        alert("Игра завершена!");
-    clicksCounter = 0;
+    
 }
 

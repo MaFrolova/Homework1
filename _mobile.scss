@@ -39,6 +39,26 @@
     }
   }
 
+  .line {
+    background-color: rgb(188, 236, 48);
+    max-width: 100%;
+    overflow: hidden;
+    height: 51px;
+
+    &__text {
+      padding-top: 16px;
+    }
+    &__text2 {
+      font-size: 16px;
+    }
+    &__text-img {
+      width: 19px;
+      height: 19px;
+      margin-left: 27px;
+      margin-right: 27px;
+    }
+  }
+  
   .content {
     display: none;
   }
