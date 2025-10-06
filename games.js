@@ -2,23 +2,25 @@
 function game1() {
     
     let randomNumber = Math.floor(Math.random() * 100) + 1;
-        while (true) {
-            let guessNumber = prompt("Угадай число от 1 до 100");
+        
+    while (true) {
+        let guessNumber = prompt("Угадай число от 1 до 100\n");
 
-            guessNumber = Number(guessNumber);
+        if (guessNumber === null) {
+            alert("Игра отменена");
+            break;
+        }
+
+        guessNumber = Number(guessNumber);
 
             if (guessNumber === randomNumber) {
-
                 alert("Поздравляю, ты угадал число!");
-
                 break;
 
             } else if (guessNumber > randomNumber) {
-
                 alert("Твое число больше загаданного, попробуй еще!");
 
             } else {
-
                 alert("Твое число меньше загаданного, попробуй еще!");
             }
         }
@@ -31,12 +33,12 @@ function ariphmetic() {
     const operations = ["+", "-", "*", "/"];
 
     const operation = operations[Math.floor(Math.random() * operations.length)];
-    
-    const a = Math.floor(Math.random() * 10) + 1;
-    const b = Math.floor(Math.random() * 10) + 1;
-    
-    let result;
+        
+    let a, b, result;
     let userAnswer;
+    
+    a = Math.floor(Math.random() * 10) + 1;
+    b = Math.floor(Math.random() * 10) + 1;
 
     switch (operation) {
         case '+':
@@ -69,6 +71,11 @@ function ariphmetic() {
             break;
     }
 
+    if (userAnswer === null) {
+        alert('Игра отменена');
+        return;
+    }
+
     const userNumber = parseFloat(userAnswer);
 
     if (userNumber === result) {
@@ -77,13 +84,19 @@ function ariphmetic() {
             alert(`Ошибка! Правильный ответ: ${result}`);
         }
     }
+    
 
 //Game3 
 function turnText() {
     let userInput;
     do {
-        userInput = prompt("Введите ваше слово или фразу:");
+        userInput = prompt("Введите ваше слово или фразу");
         
+        if (userInput === null) {
+            alert("Игра отменена");
+            return;
+        }
+
         if (userInput === '') {
             alert("Вы ничего не ввели! Пожалуйста, введите текст.");
         } 
@@ -105,41 +118,42 @@ function turnText() {
 
 //Game4
 function stone() {
-    const options = ['камень', 'ножницы', 'бумага'];       
-    const compIndex = Math.floor(Math.random() * options.length);
-    const compAnswer = options[compIndex];
+    const options = ['камень', 'ножницы', 'бумага'];  
     
-    let userChoice = prompt('Введите вариант: Камень, ножницы, бумага!').toLowerCase();
-    
-    const results = (user, computer) => {
-        if (!options.includes(user)) {
-            return 'Вы ввели что-то не то!';
-        }
-        
-        if (user === computer) {
-            return `Компьютер выбрал "${compAnswer}". Вы выбрали "${userChoice}".
-            Ничья!`;
-        }
-        
-        const winAnswer = {
-            камень: 'ножницы',
-            ножницы: 'бумага',
-            бумага: 'камень'
-        };
-        
-        if (winAnswer[user] === computer) {
-            return `Компьютер выбрал "${compAnswer}". Вы выбрали "${userChoice}".
-        Вы выиграли!`;
-        }
-        
-        return `Компьютер выбрал "${compAnswer}". Вы выбрали "${userChoice}".
-        Вы проиграли! `;
-    };
+    let userChoice;
+    do {
+      userChoice = prompt('Введите вариант: Камень, ножницы, бумага!');
+      if (userChoice === null) {
+        alert("Игра отменена");
+        return;
+    }
 
-    const result = results(userChoice, compAnswer);
-    console.log(result);
-    alert(result);
-}
+    userChoice = userChoice.toLowerCase();
+
+    if (!options.includes(userChoice)) {
+        alert("Некорректный ввод! Пожалуйста, введите 'камень', 'ножницы' или 'бумага'.");
+      }
+    } while (!options.includes(userChoice));
+    
+    const computerChoice = options[Math.floor(Math.random() * options.length)];
+    
+    let result;
+    if (userChoice === computerChoice) {
+      result = "Ничья!";
+    } else if (
+      (userChoice === "камень" && computerChoice === "ножницы") ||
+      (userChoice === "ножницы" && computerChoice === "бумага") ||
+      (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+      result = "Вы выиграли!";
+    } else {
+      result = "Компьютер выиграл!";
+    }
+  
+    alert(
+      `Вы выбрали: ${userChoice}\nКомпьютер выбрал: ${computerChoice}\n${result}`
+    );
+  }
 
 //Game5
 function quizGame() {
@@ -167,30 +181,43 @@ function quizGame() {
         }
     ];
 
-   do {
+    do {
     startMessage = confirm("Хотите поиграть в игру Викторина?");
     if (startMessage === true) {
             for (let i = 0; i < quiz.length; i++) {
-                userAnswer = Number(prompt(`Ответьте на вопрос: ${quiz[i].question}, \nВарианты ответа: \n${quiz[i].options} \n(введите номер ответа)`));
-             if (userAnswer === quiz[i].correctAnswer) {
-                alert("Правильно!");
-                pointCounter++;
-                sum = pointCounter;
-                alert(`Вы получили ${pointCounter} балл(а)`);
-                
-             } else {
-                alert("Неправильный ответ!");
-             }
+                userAnswer = prompt(`
+                    Ответьте на вопрос: ${quiz[i].question}
+                    Варианты ответа: 
+                    ${quiz[i].options.join('\n')}
+                    (введите номер ответа или оставьте поле пустым для отмены)`);
+                if (userAnswer === null || userAnswer === '') {
+                    alert("Игра отменена");
+                    return; 
+                }
+            
+                userAnswer = Number(userAnswer);
+
+                if (userAnswer === quiz[i].correctAnswer) {
+                    alert("Правильно!");
+                    pointCounter++;
+                    sum = pointCounter;
+                    alert(`Вы получили ${pointCounter} балл(а)`);
+                    
+                } else {
+                    alert("Неправильный ответ!");
+                }
             }
             alert(`Вы набрали всего: ${sum} балл(а). Поздравляем!`);
     } else {
-        alert("Всего хорошего!");
+        alert("Игра отменена. Всего хорошего!");
         break;
     }
    } while (true);    
 }
    
 //Game6
+let clicksCounter = 0;
+
 function getRandomRgb() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -200,6 +227,16 @@ function getRandomRgb() {
 function changeBlockColor() {
     const block = document.querySelector(".mini-game");
     block.style.backgroundColor = getRandomRgb();
-    
-}
+    clicksCounter ++;
+    console.log('Количество кликов:', clicksCounter); 
+    if(clicksCounter >= 10) {
+        endGame();
+    }
+}   
+function endGame() {
+    const block = document.querySelector(".mini-game");
+    block.style.backgroundColor = "";
+        alert("Игра завершена!");
+    clicksCounter = 0;
+ }
 
