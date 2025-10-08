@@ -24,9 +24,9 @@ function game1() {
                 alert("Твое число меньше загаданного, попробуй еще!");
             }
         }
-}
 
 console.log(randomNumber);
+}
 
 //Game2
 function ariphmetic() {
